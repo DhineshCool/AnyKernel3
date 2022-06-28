@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=DxT by cool585
+kernel.string=Cybertron by cool585
 do.devicecheck=1
 do.modules=0
 do.systemless=1
@@ -68,4 +68,3 @@ write_boot;
 
 #flash_boot;
 ## end vendor_boot install
-
