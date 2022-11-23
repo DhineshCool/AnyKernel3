@@ -13,7 +13,7 @@ do.cleanuponabort=0
 device.name1=blueline
 device.name2=crosshatch
 device.name5=
-supported.versions=
+supported.versions=13
 supported.patchlevels=
 '; } # end properties
 
