@@ -44,7 +44,7 @@ __supported.versions=__ will match against ro.build.version.release from the cur
 
 __supported.patchlevels=__ will match against ro.build.version.security_patch from the current ROM's build.prop. It can be set as a closed or open-ended range of dates in the format YYYY-MM, whitespace optional, e.g. `2019-04 - 2019-06`, `2019-04 -` or `- 2019-06` where the last two examples show setting a minimum and maximum, respectively.
 
-`block=auto` instead of a direct block filepath enables detection of the device boot partition for use with broad, device non-specific zips. Also accepts specifically `boot`, `recovery` or `vendor_boot`.
+`block=auto` instead of a direct block filepath enables detection of the device boot partition for use with broad, device non-specific zips. Also accepts any partition filename (from by-name), e.g. `boot`, `recovery` or `vendor_boot`.
 
 `is_slot_device=1` enables detection of the suffix for the active boot partition on slot-based devices and will add this to the end of the supplied `block=` path. Also accepts `auto` for use with broad, device non-specific zips.
 
@@ -120,7 +120,7 @@ You may also use _ui_print "\<text\>"_ to write messages back to the recovery du
 
 ## // Binary Inclusion ##
 
-The AK3 repo includes current ARM builds of `magiskboot`, `magiskpolicy`, `lptools_static`, `httools_static`, `fec` and `busybox` by default to keep the basic package small. Builds for other architectures and optional binaries (see below) are available from the latest Magisk zip, or my latest AIK-mobile and FlashIt packages, respectively, here:
+The AK3 repo includes current ARM builds of `magiskboot`, `magiskpolicy`, `lptools_static`, `httools_static`, `fec`, `snapshotupdater_static` and `busybox` by default to keep the basic package small. Builds for other architectures and optional binaries (see below) are available from the latest Magisk zip, or my latest AIK-mobile and FlashIt packages, respectively, here:
 
 https://forum.xda-developers.com/t/tool-android-image-kitchen-unpack-repack-kernel-ramdisk-win-android-linux-mac.2073775/ (Android Image Kitchen thread)  
 https://forum.xda-developers.com/t/tools-zips-scripts-osm0sis-odds-and-ends-multiple-devices-platforms.2239421/ (Odds and Ends thread)
