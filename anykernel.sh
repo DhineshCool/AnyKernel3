@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=Cybertron Kernel v19 by cool585
+kernel.string=Cybertron Kernel by cool585
 do.devicecheck=1
 do.modules=1
 do.systemless=0
@@ -87,8 +87,8 @@ if [ -d $AKHOME/modules ] || [ -d $home/modules ]; then
     cat <<EOM > "$magisk_mod/module.prop"
 id=ak3-helper
 name=Cybertron Kernel Modules
-version=v19
-versionCode=19
+version=Cybertron
+versionCode=1
 author=cool585
 description=Kernel modules and tunings for Cybertron Kernel
 EOM
