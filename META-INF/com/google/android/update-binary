@@ -18,8 +18,12 @@ $BOOTMODE || DIR=$(dirname "$ZIPFILE");
 
 ui_print() {
   until [ ! "$1" ]; do
-    echo "ui_print $1
-      ui_print" >> $OUTFD;
+    if [ -e "$OUTFD" ]; then
+      echo "ui_print $1
+        ui_print" >> $OUTFD;
+    else
+      echo "$1";
+    fi;
     shift;
   done;
 }

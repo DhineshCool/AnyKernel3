@@ -15,8 +15,12 @@ split_img=$home/split_img;
 # ui_print "<text>" [...]
 ui_print() {
   until [ ! "$1" ]; do
-    echo "ui_print $1
-      ui_print" >> /proc/self/fd/$OUTFD;
+    if [ "$OUTFD" ] && [ -e "/proc/self/fd/$OUTFD" ]; then
+      echo "ui_print $1
+        ui_print" >> /proc/self/fd/$OUTFD;
+    else
+      echo "$1";
+    fi;
     shift;
   done;
 }
